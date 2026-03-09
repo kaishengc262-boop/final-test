@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Works | Kai Shen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: white;
+            padding: 80px 10%;
+            line-height: 1.6;
+        }
+
+        /* TITLE */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: clamp(28px, 5vw, 42px);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* BACK BUTTON */
+        .back {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .back a {
+            color: #aaa;
+            text-decoration: none;
+            border: 1px solid #333;
+            padding: 12px 30px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+
+        .back a:hover {
+            background: white;
+            color: black;
+            border-color: white;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            animation: fadeIn 1s ease;
+        }
+
+        /* LOGO ITEM */
+        .grid img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            background: #ffffff; /* 确保 Logo 在白色背景下展示 */
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
+        .grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1);
+            border-color: #555;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* MOBILE */
+        @media(max-width: 768px) {
+            body { padding: 60px 5%; }
+            .grid { gap: 25px; }
+            .grid img { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Logo Works</h1>
+    <p class="subtitle">Brand Identity & Visual Marks</p>
+
+    <div class="back">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <div class="grid">
+        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800" alt="Logo 1">
+        <img src="https://images.unsplash.com/photo-1599305090598-fe179d501c27?q=80&w=800" alt="Logo 2">
+        <img src="https://images.unsplash.com/photo-1560155016-bd4879ae8f21?q=80&w=800" alt="Logo 3">
+    </div>
+
+</body>
+</html>

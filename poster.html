@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Works | Kai Shen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background: #0a0a0a; /* 更深邃的黑色 */
+            color: white;
+            padding: 80px 10%;
+            line-height: 1.6;
+        }
+
+        /* TITLE */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: clamp(28px, 5vw, 42px);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        /* BACK BUTTON */
+        .back {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .back a {
+            color: #aaa;
+            text-decoration: none;
+            border: 1px solid #333;
+            padding: 12px 30px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .back a:hover {
+            background: white;
+            color: black;
+            border-color: white;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        /* POSTER ITEM */
+        .poster-item {
+            text-decoration: none;
+            color: white;
+        }
+
+        .grid img {
+            width: 100%;
+            aspect-ratio: 1 / 1.414; /* A4 Ratio */
+            object-fit: cover;
+            background: #1a1a1a;
+            border: 1px solid #222;
+            transition: 0.5s ease;
+            cursor: pointer;
+            display: block;
+        }
+
+        .grid img:hover {
+            transform: translateY(-10px);
+            border-color: #555;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* LOADING ANIMATION */
+        .grid {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* MOBILE */
+        @media(max-width:768px){
+            body { padding: 60px 5%; }
+            .grid { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Poster Works</h1>
+    <p class="subtitle">Graphic Design & Visual Arts Portfolio</p>
+
+    <div class="back">
+        <a href="index.html">← Back to Home</a>
+    </div>
+
+    <div class="grid">
+        <img src="https://i.postimg.cc/59PrQ301/ELDEN-RING-3.jpg" alt="Work 1">
+        <img src="https://images.unsplash.com/photo-1541462608141-ad1557d685b5?q=80&w=800" alt="Work 2">
+        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800" alt="Work 3">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800" alt="Work 4">
+        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?q=80&w=800" alt="Work 5">
+        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=800" alt="Work 6">
+        <img src="https://images.unsplash.com/photo-1550745679-33d01608216a?q=80&w=800" alt="Work 7">
+        <img src="https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?q=80&w=800" alt="Work 8">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800" alt="Work 9">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800" alt="Work 10">
+    </div>
+
+</body>
+</html>

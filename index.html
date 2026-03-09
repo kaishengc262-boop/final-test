@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Shen | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #111;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            display: flex;
+            height: 100vh;
+            min-height: 600px;
+            flex-wrap: wrap;
+        }
+
+        .hero-left {
+            flex: 1.2;
+            min-width: 350px;
+            background-image: url("https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1000&auto=format&fit=crop");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .hero-right {
+            flex: 1;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 8%;
+            background: #111;
+        }
+
+        .hero-right h1 {
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .hero-right p {
+            color: #888;
+            max-width: 420px;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 1px solid white;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.4s;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .btn.primary {
+            background: white;
+            color: black;
+        }
+
+        .btn.primary:hover {
+            background: transparent;
+            color: white;
+        }
+
+        /* --- WORK SECTION --- */
+        .work-section {
+            padding: 120px 8%;
+            background: #fff;
+            color: #000;
+        }
+
+        .work-section h2 {
+            font-size: 42px;
+            margin-bottom: 60px;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .item {
+            position: relative;
+            overflow: hidden;
+            background: #eee;
+            aspect-ratio: 3 / 4;
+            display: block;
+            text-decoration: none;
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .item:hover img {
+            transform: scale(1.08);
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+            color: white;
+            font-size: 24px;
+            font-weight: 500;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* --- CONTACT SECTION --- */
+        .contact {
+            padding: 150px 8%;
+            text-align: center;
+            background: #111;
+        }
+
+        .contact h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 8%;
+            text-align: center;
+            border-top: 1px solid #222;
+            font-size: 13px;
+            color: #444;
+            letter-spacing: 1px;
+        }
+
+        /* --- MOBILE ADAPTATION --- */
+        @media (max-width: 768px) {
+            header { padding: 20px 5%; }
+            .hero-left { height: 40vh; order: 2; }
+            .hero-right { height: 65vh; order: 1; text-align: center; padding: 100px 5% 40px; }
+            .hero-right p { margin: 0 auto 30px; }
+            .work-section { padding: 80px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KAI SHEN</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#work">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left"></div>
+        <div class="hero-right">
+            <h1>My<br>Portfolio</h1>
+            <p>Poster design, animation visuals and logo design. Focused on minimal and modern graphic aesthetics.</p>
+            <div class="buttons">
+                <a href="#work" class="btn primary">View Works</a>
+                <a href="https://wa.me/60174769089" class="btn">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-section">
+        <h2>My Works</h2>
+        <div class="gallery">
+            <a href="poster.html" class="item">
+                <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=800&auto=format&fit=crop" alt="Poster Design">
+                <div class="overlay">Poster Design</div>
+            </a>
+
+            <a href="animation.html" class="item">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" alt="Animation">
+                <div class="overlay">Animation Visuals</div>
+            </a>
+
+            <a href="logo.html" class="item">
+                <img src="https://images.unsplash.com/photo-1560155016-bd4879ae8f21?q=80&w=800&auto=format&fit=crop" alt="Logo Design">
+                <div class="overlay">Brand Identity</div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Let's Talk</h2>
+        <p>Available for freelance projects and creative collaborations.</p>
+        <a href="https://wa.me/60174769089?text=Hi%20Kai%20Shen,%20I%20saw%20your%20portfolio" class="btn">Start a Project</a>
+    </section>
+
+    <footer>
+        &copy; 2026 KAI SHEN. ALL RIGHTS RESERVED.
+    </footer>
+
+</body>
+</html>
